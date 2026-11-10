@@ -1,0 +1,20 @@
+apisix:
+  node_listen: 9080
+  enable_admin: false
+  ssl:
+    enable: false
+nginx_config:
+  worker_processes: 2
+  enable_cpu_affinity: false
+  error_log_level: warn
+  http:
+    access_log_format: "$remote_addr $request_method $uri $status $request_time"
+deployment:
+  role: data_plane
+  role_data_plane:
+    config_provider: yaml
+stream_plugins: []
+plugins:
+  - key-auth
+  - consumer-restriction
+  - proxy-rewrite

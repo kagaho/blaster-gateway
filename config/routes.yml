@@ -1,0 +1,25 @@
+# Public sample topology: host 192.168.15.10, gateway 192.168.15.1.
+# Backends are external prerequisites, not included model/agent implementations.
+consumers:
+  - demo-user
+  - agent-service
+services:
+  rag:
+    node: host.docker.internal:15002
+    allowed_consumers: [demo-user, agent-service]
+  inference:
+    node: host.docker.internal:18030
+    allowed_consumers: [demo-user, agent-service]
+  agent:
+    node: host.docker.internal:18040
+    allowed_consumers: [agent-service]
+routes:
+  - {id: rag, service: rag, uri: /api/rag, target: /invoke, methods: [POST]}
+  - {id: inference, service: inference, uri: /api/inference/*, prefix: /api/inference/}
+  - {id: agent, service: agent, uri: /api/agent/*, prefix: /api/agent/}
+  # Historical aliases preserve paths, but all now require the same authentication.
+  - {id: legacy-rag, service: rag, uri: /elita-energon, target: /invoke, methods: [POST]}
+  - {id: legacy-rag-mcp, service: rag, uri: /elita-energon/mcp/v1, target: /invoke, methods: [POST]}
+  - {id: legacy-inference, service: inference, uri: /elita-inference/*, prefix: /elita-inference/}
+  - {id: legacy-inference-mcp, service: inference, uri: /elita-inference/mcp/*, prefix: /elita-inference/mcp/}
+  - {id: legacy-agent, service: agent, uri: /elita-acra/api/*, prefix: /elita-acra/api/}
