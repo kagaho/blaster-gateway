@@ -8,7 +8,7 @@ An AI platform grows beyond a single model endpoint. Retrieval, inference, agent
 
 This repository consolidates **BLASTER-MCP-GW** and **Blaster2.0** into one reviewable project. It combines the first repository's gateway implementation with the second's later agent integration and operational context, then removes machine-specific secrets and closes the legacy authentication bypasses. The original repositories remain unchanged.
 
-**Status: local publication-review candidate. No Git remote is configured and this repository has not been published.**
+**Release: v1.1.1 — consolidated portfolio source, with reviewed gateway policy and documented deployment boundaries.**
 
 ## What the project demonstrates
 
@@ -125,7 +125,7 @@ This consolidation adds renderer/ACL tests, negative credential tests, local lin
 
 ## Versions and repository map
 
-**`v1.0.0`** is the clean consolidation baseline. **`v1.1.0`** is the expanded review candidate on `main`. Annotated `source/v2.0.1`, `source/v2.1.0`, and `source/v2.2.0` tags preserve sanitized source-milestone notes on archive branches, without importing sensitive source Git objects. See [provenance](docs/provenance.md).
+**`v1.0.0`** is the clean consolidation baseline. **`v1.1.0`** preserves the expanded review candidate; **`v1.1.1`** prepares that reviewed implementation for publication on `main`. Annotated `source/v2.0.1`, `source/v2.1.0`, and `source/v2.2.0` tags preserve sanitized source-milestone notes on archive branches, without importing sensitive source Git objects. See [provenance](docs/provenance.md).
 
 | Directory | Purpose |
 | --- | --- |

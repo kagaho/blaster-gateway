@@ -63,4 +63,4 @@ The Vault image's live initialization/authentication lifecycle is not exercised 
 
 ## Publication state
 
-Local checks and scans are repeated after the release commit so all new reachable blobs are included. GitHub Actions is provided for future use; no remote CI result is claimed because this repository is not published. Review the final local completion report for the check counts and release references.
+Local checks and scans are repeated after release commits so all new reachable blobs are included. The [GitHub Actions workflow](../.github/workflows/checks.yml) runs the local test, documentation, security, whitespace, and Compose checks. Consult the repository Actions tab for the result associated with a particular commit; the local check counts above describe release preparation.

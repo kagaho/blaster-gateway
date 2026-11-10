@@ -199,4 +199,4 @@ Do not run `down -v` unless you intend to delete the Vault data volume. The norm
 | Old key still works | Was rendering successful, did APISIX apply it, and is the request using a bypass port? |
 | TLS validation fails | Correct CA, certificate name, and external mount; keep verification enabled |
 
-Before public release, review the [security report](security-review.md), [validation record](validation.md), branches/tags, and `git remote -v`. Publication is a separate user-approved step.
+Before each release, review the [security report](security-review.md), [validation record](validation.md), branches/tags, and `git remote -v`. Publishing source does not deploy the gateway; runtime secrets and deployment identity must remain private.

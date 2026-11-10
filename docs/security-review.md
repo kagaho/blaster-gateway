@@ -52,8 +52,8 @@ The supplied local Vault profile uses HTTP only over its loopback administration
 - Dependency/image version tags were verified against upstream registries. This review is not a complete operating-system/container vulnerability assessment, penetration test, or production certification.
 - Real backend integration and the operator's actual CA/certificate configuration remain outside isolated mock-backend tests.
 
-## Owner review before publication
+## Release review
 
 Review the [README](../README.md), [administration guide](administration.md), source provenance, runtime permission model, route/consumer policy, scan results, and branches/tags. Confirm that source credentials have been rotated where necessary and that historical route names and architecture descriptions are appropriate to share.
 
-The repository has no remote. Creating a remote or making it public requires the owner's next instruction.
+Public-source release does not deploy the gateway or publish its private runtime state. Repeat the publication scans for subsequent releases and keep deployment credentials outside Git.

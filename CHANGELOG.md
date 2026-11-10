@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.1.1 — 2026-11-09
+
+Publication preparation for the reviewed consolidated source.
+
+- Replace local-only status text with durable release and deployment-boundary documentation.
+- Retain the reviewed v1.1.0 implementation and sanitized source milestone history.
+- Repeat publication scans before pushing the public-source edition.
+
 ## v1.1.0 — 2026-11-09
 
 Consolidated portfolio and security-review candidate, prepared locally for owner review.
@@ -13,7 +21,7 @@ Consolidated portfolio and security-review candidate, prepared locally for owner
 - Use fictional host `192.168.15.10`, gateway `192.168.15.1`, and subnet `192.168.15.0/24` in examples.
 - Add security-focused tests, real disposable gateway integration, documentation checks, full-history scans, CI configuration, and MIT licensing.
 
-Source repositories and live services are unchanged. This version is not published.
+Source repositories and live services are unchanged. This tag preserves the local review milestone preceding the publication edition.
 
 ## v1.0.0 — 2026-11-09
 

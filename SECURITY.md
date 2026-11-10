@@ -18,4 +18,4 @@ The custom scanner inspects publishable files and every reachable Git blob. Inde
 
 No deployment certificates, certificate metadata, Vault initialization records, unseal/recovery material, or credential-bearing source Git history are included. Ephemeral test TLS material is generated outside the repository and deleted after validation.
 
-This local repository is awaiting owner review. Publishing or creating a public remote is a separate authorized step.
+Publishing requires owner authorization and clean scans. The checked-in examples are public-source material; actual deployments, credentials, certificates, and generated runtime state remain private.
